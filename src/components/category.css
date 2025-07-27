@@ -1,0 +1,173 @@
+.generasbookContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.itemDiv {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.itemDiv:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.itemDiv>img {
+    width: 300px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.category-page {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.book-title {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #444;
+    font-weight: 500;
+    max-width: 300px;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.no-results {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.itemDiv {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.itemDiv:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.itemDiv>img {
+    width: 300px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Hidden title on default */
+.hoverTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Show title on hover */
+.itemDiv:hover .hoverTitle {
+    opacity: 1;
+}
+
+.BookCardContainer {
+    position: relative;
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #eee;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.BookCardContainer:hover {
+    transform: scale(1.03);
+}
+
+.BookCardContainer>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.BookOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.BookOverlay > h1 {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.BookCardContainer:hover .BookOverlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}

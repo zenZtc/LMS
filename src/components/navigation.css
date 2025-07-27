@@ -1,0 +1,58 @@
+.Navcontainer {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HeaderName {
+    display: flex;
+    padding: 10px;
+}
+
+.LinksDiv {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.LinksDiv>div {
+    background-color: rgb(184, 193, 193);
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .Navcontainer {
+        flex-direction: column;
+        height: auto;
+        align-items: stretch;
+    }
+
+    .HeaderName {
+        justify-content: center;
+    }
+
+    .LinksDiv {
+        justify-content: center;
+    }
+
+    .LinksDiv>div {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .HeaderName h1 {
+        font-size: 1.2rem;
+    }
+
+    .LinksDiv>div p {
+        font-size: 0.9rem;
+    }
+}

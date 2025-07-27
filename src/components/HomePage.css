@@ -1,0 +1,101 @@
+.HomeContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.HomeMaincontainer {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    grid-column-start: 2;
+}
+
+.HomeContainer > h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin: 40px 20px; 
+    font-weight: 600;
+    font-size: 2.5rem; 
+    color: #333;
+    background: linear-gradient(to right, #a06565, #ffa500); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.GenreContainer {
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.GenreContainer:hover {
+    transform: scale(1.03);
+}
+
+.insideGenre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.insideGenre>h1 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.GenreContainer:hover .insideGenre {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+.HomeMaincontainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+.HomeMaincontainer::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .GenreContainer {
+        height: 200px;
+    }
+
+    .insideGenre>h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .GenreContainer {
+        height: 160px;
+    }
+
+    .insideGenre>h1 {
+        font-size: 1rem;
+    }
+}
